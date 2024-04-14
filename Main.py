@@ -4,6 +4,22 @@ import numpy as np
 from numpy import random as rd
 
 
+def bubble_sort(vetor):
+    pass
+
+
+def insertion_sort(vetor):
+    pass
+
+
+def quick_sort(vetor):
+    pass
+
+
+def merge_sort(vetor):
+    pass
+
+
 def shell_sort(vetor):
     tamanho = len(vetor)  # Pega tamanho do vetor
     meio = tamanho // 2  # encontra o meio do vetor
@@ -18,13 +34,22 @@ def shell_sort(vetor):
             vetor[j] = aux
         meio //= 2
 
-    return vetor # retorna o vetor ordenado
+    return vetor  # retorna o vetor ordenado
 
+
+def selection_sort(vetor):
+    pass
+
+
+def radix_sort(vetor):
+    pass
+
+
+#  def PROXIMO_sort(vetor):
 
 # Para testar: Lista de números em ordem aleatória.
 vetor1 = np.array([8, 5, 1, 7, 9, 4, 10, 3, 6, 2])
 print(vetor1)
-
 
 inicio = time()
 sort1 = shell_sort(vetor1)
@@ -36,7 +61,6 @@ print(total)
 vetor2 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 print(vetor2)
 
-
 inicio = time()
 sort2 = shell_sort(vetor2)
 total = time() - inicio
@@ -46,7 +70,6 @@ print(total)
 # Para testar: Uma lista classificada em ordem decrescente.
 vetor3 = np.array([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
 print(vetor3)
-
 
 inicio = time()
 sort3 = shell_sort(vetor3)
@@ -58,7 +81,6 @@ print(total)
 vetor4 = np.array([8, 5, 1, 7, 9, 4, 10, 3, 6, 2, 8, 5, 1])
 print(vetor4)
 
-
 inicio = time()
 sort4 = shell_sort(vetor4)
 total = time() - inicio
@@ -68,7 +90,6 @@ print(total)
 # Para testar: Uma lista vazia.
 vetor5 = np.array([])
 print(vetor5)
-
 
 inicio = time()
 sort5 = shell_sort(vetor5)
