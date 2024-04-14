@@ -5,20 +5,20 @@ from numpy import random as rd
 
 
 def shell_sort(vetor):
-    tamanho = len(vetor)
-    meio = tamanho // 2
+    tamanho = len(vetor)  # Pega tamanho do vetor
+    meio = tamanho // 2  # encontra o meio do vetor
 
-    while meio > 0:
-        for i in range(meio, tamanho):
-            aux = vetor[i]
+    while meio > 0:  # percorre e vai dividindo esse meio por 2 enquanto ele for menor q 0
+        for i in range(meio, tamanho):  # percorre a partir do meio
+            aux = vetor[i]  # auxiliar
             j = i
-            while j >= meio and vetor[j - meio] > aux:
-                vetor[j] = vetor[j - meio]
-                j -= meio
+            while j >= meio and vetor[j - meio] > aux:  # se o número na posicao j - a metade for maior
+                vetor[j] = vetor[j - meio]  # entao troca
+                j -= meio  # e j vai diminuindo
             vetor[j] = aux
         meio //= 2
 
-    return vetor
+    return vetor # retorna o vetor ordenado
 
 
 # Para testar: Lista de números em ordem aleatória.
