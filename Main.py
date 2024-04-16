@@ -9,23 +9,26 @@ def bubble_sort(vetor):
     troca = True
     while troca:
         troca = False
-        for i in range(n-1):
-            if vetor[i] > vetor[i+1]:
-                vetor[i], vetor[i+1] = vetor[i+1], vetor[i]
+        for i in range(n - 1):
+            if vetor[i] > vetor[i + 1]:
+                vetor[i], vetor[i + 1] = vetor[i + 1], vetor[i]
                 troca = True
         n -= 1
     return vetor
+
 
 def insertion_sort(vetor):
     pass
 
 
+#  para o quick sort
 def particao(vetor, inicio, final):
-  pass
+    pass
+
 
 def quick_sort(vetor, inicio, final):
-  # desenvolver
-  return vetor
+    # desenvolver
+    return vetor
 
 
 def merge_sort(vetor):
@@ -49,6 +52,8 @@ def shell_sort(vetor):
     return vetor  # retorna o vetor ordenado
 
 
+#  ele pega os menores valores e vai pondo nas menores posicoes
+#  faz pesquisa sequencial para achar os menores valores
 def selection_sort(vetor):
     pass
 

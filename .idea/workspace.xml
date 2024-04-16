@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="Apenas declarando os algoritmos de ordenação">
+    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="Bubble Sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -110,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713134716386</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Bubble Sort">
+      <option name="closed" value="true" />
+      <created>1713136225709</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713136225709</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -118,6 +126,7 @@
     <MESSAGE value="shell sort" />
     <MESSAGE value="shell sort - documentation" />
     <MESSAGE value="Apenas declarando os algoritmos de ordenação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apenas declarando os algoritmos de ordenação" />
+    <MESSAGE value="Bubble Sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bubble Sort" />
   </component>
 </project>
