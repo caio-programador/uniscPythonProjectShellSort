@@ -226,3 +226,24 @@ print(sort8)
 
 print(total)
 print()
+
+
+vetor8 = rd.randint(0, 1000000000, 100000000)
+print(vetor8)
+print("\nSHELL SORT")
+inicio = time()
+sort8 = shell_sort(vetor8)
+total = time() - inicio
+print(sort8)
+
+print(total)
+
+print("\nBUBBLE SORT")
+
+inicio = time()
+sort8 = bubble_sort(vetor8)
+total = time() - inicio
+print(sort8)
+
+print(total)
+print()
