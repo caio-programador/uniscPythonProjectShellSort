@@ -40,7 +40,7 @@ def bubble_sort_otimizado(vetor):
 def insertion_sort(vetor):
     n = len(vetor)
 
-    for index in range(n):
+    for index in range(n-1):
         valorAtual = vetor[index]
         posicao = index
 
@@ -259,9 +259,9 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort8 = bubble_sort_otimizado(vetor8)
+#sort8 = bubble_sort_otimizado(vetor8)
 total = time() - inicio
-print(sort8)
+#print(sort8)
 
 print(total)
 print()
