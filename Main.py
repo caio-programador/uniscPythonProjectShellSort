@@ -3,8 +3,28 @@ from time import time
 import numpy as np
 from numpy import random as rd
 
+from time import time
 
-def bubble_sort(vetor):
+
+def bubble_sort_lento(array):
+    # loop to access each array element
+    for i in range(len(array)):
+
+        # loop to compare array elements
+        for j in range(0, len(array) - i - 1):
+
+            # compare two adjacent elements
+            # change > to < to sort in descending order
+            if array[j] > array[j + 1]:
+                # swapping elements if elements
+                # are not in the intended order
+                temp = array[j]
+                array[j] = array[j + 1]
+                array[j + 1] = temp
+    return array
+
+
+def bubble_sort_otimizado(vetor):
     n = len(vetor)
     troca = True
     while troca:
@@ -18,7 +38,18 @@ def bubble_sort(vetor):
 
 
 def insertion_sort(vetor):
-    pass
+    n = len(vetor)
+
+    for index in range(n):
+        valorAtual = vetor[index]
+        posicao = index
+
+        while posicao > 0 and vetor[index+1]<valorAtual:
+            vetor[index+1] = vetor[index]
+            posicao-=1
+        vetor[index] = valorAtual
+
+    return vetor
 
 
 #  para o quick sort
@@ -36,20 +67,28 @@ def merge_sort(vetor):
 
 
 def shell_sort(vetor):
-    tamanho = len(vetor)  # Pega tamanho do vetor
-    meio = tamanho // 2  # encontra o meio do vetor
+    h = len(vetor) // 2
+    while h > 0:
 
-    while meio > 0:  # percorre e vai dividindo esse meio por 2 enquanto ele for menor q 0
-        for i in range(meio, tamanho):  # percorre a partir do meio
-            aux = vetor[i]  # auxiliar
-            j = i
-            while j >= meio and vetor[j - meio] > aux:  # se o número na posicao j - a metade for maior
-                vetor[j] = vetor[j - meio]  # entao troca
-                j -= meio  # e j vai diminuindo
-            vetor[j] = aux
-        meio //= 2
+        for start in range(h):
+            for i in range(start + h, len(vetor), h):
 
-    return vetor  # retorna o vetor ordenado
+                currentvalue = vetor[i]
+                position = i
+
+                while position >= h and vetor[position - h] > currentvalue:
+                    vetor[position] = vetor[position - h]
+                    position = position - h
+
+                vetor[position] = currentvalue
+
+        h = h // 2
+
+        return vetor
+
+
+
+
 
 
 #  ele pega os menores valores e vai pondo nas menores posicoes
@@ -79,7 +118,7 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort1 = bubble_sort(vetor1)
+sort1 = bubble_sort_otimizado(vetor1)
 total = time() - inicio
 print(sort1)
 
@@ -99,7 +138,7 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort2 = bubble_sort(vetor2)
+sort2 = bubble_sort_otimizado(vetor2)
 total = time() - inicio
 print(sort2)
 
@@ -119,7 +158,7 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort3 = bubble_sort(vetor3)
+sort3 = bubble_sort_otimizado(vetor3)
 total = time() - inicio
 print(sort3)
 
@@ -140,7 +179,7 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort4 = bubble_sort(vetor4)
+sort4 = bubble_sort_otimizado(vetor4)
 total = time() - inicio
 print(sort4)
 
@@ -160,7 +199,7 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort5 = bubble_sort(vetor5)
+sort5 = bubble_sort_otimizado(vetor5)
 total = time() - inicio
 print(sort5)
 
@@ -180,7 +219,7 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort6 = bubble_sort(vetor6)
+sort6 = bubble_sort_otimizado(vetor6)
 total = time() - inicio
 print(sort6)
 
@@ -200,14 +239,14 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort7 = bubble_sort(vetor7)
+sort7 = bubble_sort_otimizado(vetor7)
 total = time() - inicio
 print(sort7)
 
 print(total)
 print()
 # Para testar: Uma lista longa.
-vetor8 = rd.randint(0, 1000, 100)
+vetor8 = rd.randint(0, 1000000, 100000)
 print(vetor8)
 print("\nSHELL SORT")
 inicio = time()
@@ -220,28 +259,17 @@ print(total)
 print("\nBUBBLE SORT")
 
 inicio = time()
-sort8 = bubble_sort(vetor8)
+sort8 = bubble_sort_otimizado(vetor8)
 total = time() - inicio
 print(sort8)
 
 print(total)
 print()
 
-
-vetor8 = rd.randint(0, 1000000000, 100000000)
-print(vetor8)
-print("\nSHELL SORT")
-inicio = time()
-sort8 = shell_sort(vetor8)
-total = time() - inicio
-print(sort8)
-
-print(total)
-
-print("\nBUBBLE SORT")
+print("\nINSERTION SORT")
 
 inicio = time()
-sort8 = bubble_sort(vetor8)
+sort8 = insertion_sort(vetor8)
 total = time() - inicio
 print(sort8)
 
