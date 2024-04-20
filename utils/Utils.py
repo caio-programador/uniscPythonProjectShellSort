@@ -65,5 +65,5 @@ def all_sort(sort_type, vetor):
 
 
 def test(vetor):
-    for i in range(8):
+    for i in range(9):
         all_sort(i, vetor)

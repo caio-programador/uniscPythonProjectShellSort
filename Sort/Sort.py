@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def bubble_sort(vetor):
     n = len(vetor)
     comparacoes, num_troca = 0, 0
@@ -120,7 +123,7 @@ def merge(esquerda, direita):
     resultado.extend(esquerda[i:])
     resultado.extend(direita[j:])
 
-    return resultado
+    return np.array(resultado)
 
 
 def shell_sort(vetor):
@@ -138,23 +141,21 @@ def shell_sort(vetor):
     return vetor, comparacoes, num_troca
 
 
-def gapInsertionSort(alist, start, gap):
+def gapInsertionSort(vetor, start, h):
     global comparacoes, num_troca
-    for i in range(start + gap, len(alist), gap):
-        currentvalue = alist[i]
+    for i in range(start + h, len(vetor), h):
+        currentvalue = vetor[i]
         position = i
         comparacoes += 1
 
-        while position >= gap and alist[position - gap] > currentvalue:
+        while position >= h and vetor[position - h] > currentvalue:
             num_troca += 1
-            alist[position] = alist[position - gap]
-            position = position - gap
+            vetor[position] = vetor[position - h]
+            position = position - h
 
-        alist[position] = currentvalue
+        vetor[position] = currentvalue
 
 
-#  ele pega os menores valores e vai pondo nas menores posicoes
-#  faz pesquisa sequencial para achar os menores valores
 def selection_sort(vetor):
     n = len(vetor)
     comparacoes, num_troca = 0, 0
