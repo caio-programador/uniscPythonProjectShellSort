@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="insertion_sort e arrumando shell_sort">
-      <change afterPath="$PROJECT_DIR$/Sort/Sort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/Function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="fizemos o shell e o bubble">
+      <change afterPath="$PROJECT_DIR$/MainFinal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainTeste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/Sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,10 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainFinal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainTeste.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Sort.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Utils.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -56,7 +59,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="MainTeste" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="uniscPythonProjectShellSort" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,7 +72,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainTeste.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713317550211</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fizemos o shell e o bubble">
+      <option name="closed" value="true" />
+      <created>1713322077215</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713322077215</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -179,6 +190,7 @@
     <MESSAGE value="num sei" />
     <MESSAGE value="lista com muitos elementos" />
     <MESSAGE value="insertion_sort e arrumando shell_sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="insertion_sort e arrumando shell_sort" />
+    <MESSAGE value="fizemos o shell e o bubble" />
+    <option name="LAST_COMMIT_MESSAGE" value="fizemos o shell e o bubble" />
   </component>
 </project>
