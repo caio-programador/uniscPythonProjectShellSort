@@ -31,3 +31,5 @@ vetor7 = np.array([6, 9, 6, 7, 6, 5, 6, 6, 2, 6])
 
 vetor8 = rd.randint(0, 10000, 1000)
 
+# teste
+
