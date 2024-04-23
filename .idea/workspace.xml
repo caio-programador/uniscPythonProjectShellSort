@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="quick sort, selection sort , merge sort e inserction sort">
+    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="teste">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainTeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainTeste.py" afterDir="false" />
     </list>
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713624703607</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="teste">
+      <option name="closed" value="true" />
+      <created>1713911204133</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713911204133</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -197,6 +205,7 @@
     <MESSAGE value="insertion_sort e arrumando shell_sort" />
     <MESSAGE value="fizemos o shell e o bubble" />
     <MESSAGE value="quick sort, selection sort , merge sort e inserction sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="quick sort, selection sort , merge sort e inserction sort" />
+    <MESSAGE value="teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste" />
   </component>
 </project>
