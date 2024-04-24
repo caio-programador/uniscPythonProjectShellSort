@@ -2,63 +2,34 @@ import sys
 
 import numpy as np
 from numpy import random as rd
-from utils.Utils import test
+from utils.Utils import *
 
+limpa_arquivo()
+arquivo = "Casos de teste"
 sys.setrecursionlimit(10000000)
+for i in range(1, 4):
+    print(f"CENÁRIO {i}:\n\n")
+    adicionar_texto(arquivo, f"CENÁRIO {i}\n\n")
+    adicionar_texto(arquivo, "PEQUENO - 1000 DADOS\n\n")
+    vetorPequenoAleatorio = rd.randint(1, 10000, 1000)
+    print("PEQUENO - 1000 DADOS")
+    test(vetorPequenoAleatorio)
+    """
+    adicionar_texto(arquivo, "MÉDIO - 10000 DADOS\n\n")
+    vetorMedioAleatorio = rd.randint(1, 100000, 10000)
+    print("MÉDIO - 10000 DADOS")
+    test(vetorMedioAleatorio)
+    
+   
+    adicionar_texto(arquivo, "GRANDE - 50000 DADOS\n\n")
+    vetorGrandeAleatorio = rd.randint(1, 500000, 50000)
+    print("GRANDE - 50000 DADOS")
+    test(vetorGrandeAleatorio)
 
-vetorPequenoAleatorio = rd.randint(1, 10000, 1000)
-vetorPequenoDecrescente = np.sort(vetorPequenoAleatorio)[::-1]
-vetorPequenoUnico = np.array([100] * 1000)
-print("PEQUENO - 1000 DADOS\n")
-print("\nCenário 1 - Vetor com elementos aleatórios")
-test(vetorPequenoAleatorio)
-
-print("\nCenário 2 - Vetor com elementos aleatórios em ordem decrescente")
-test(vetorPequenoDecrescente)
-
-print("\nCenário 3 - Vetor com elementos iguais")
-test(vetorPequenoUnico)
+    adicionar_texto(arquivo, "SUPER GRANDE - 100000 DADOS\n\n")
+    vetorSuperGrandeAleatorio = rd.randint(1, 1000000, 100000)
+    print("SUPER GRANDE - 100000 DADOS")
+    test(vetorSuperGrandeAleatorio)"""
+    print()
 
 
-vetorMedioAleatorio = rd.randint(1, 100000, 10000)
-vetorMedioDecrescente = np.sort(vetorMedioAleatorio)[::-1]
-vetorMedioUnico = np.array([100] * 10000)
-
-print("\nMÉDIO - 10000 DADOS\n")
-print("\nCenário 1 - Vetor com elementos aleatórios")
-test(vetorMedioAleatorio)
-
-print("\nCenário 2 - Vetor com elementos aleatórios em ordem decrescente")
-test(vetorMedioDecrescente)
-
-print("\nCenário 3 - Vetor com elementos iguais")
-test(vetorMedioUnico)
-
-vetorGrandeAleatorio = rd.randint(1, 500000, 50000)
-vetorGrandeDecrescente = np.sort(vetorGrandeAleatorio)[::-1]
-vetorGrandeUnico = np.array([100] * 50000)
-print("\nGRANDE - 50000 DADOS\n")
-
-print("\nCenário 1 - Vetor com elementos aleatórios")
-test(vetorGrandeAleatorio)
-
-print("\nCenário 2 - Vetor com elementos aleatórios em ordem decrescente")
-test(vetorGrandeDecrescente)
-
-print("\nCenário 3 - Vetor com elementos iguais")
-test(vetorGrandeUnico)
-
-vetorSuperGrandeAleatorio = rd.randint(1, 1000000, 100000)
-vetorSuperGrandeDecrescente = np.sort(vetorSuperGrandeAleatorio)[::-1]
-vetorSuperGrandeUnico = np.array([100] * 100000)
-
-print("\nSUPER GRANDE - 100000 DADOS\n")
-
-print("\nCenário 1 - Vetor com elementos aleatórios")
-test(vetorSuperGrandeAleatorio)
-
-print("\nCenário 2 - Vetor com elementos aleatórios em ordem decrescente")
-test(vetorSuperGrandeDecrescente)
-
-print("\nCenário 3 - Vetor com elementos iguais")
-test(vetorSuperGrandeUnico)

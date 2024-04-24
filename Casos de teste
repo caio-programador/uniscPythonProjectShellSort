@@ -1,0 +1,132 @@
+CENÁRIO 1
+
+PEQUENO - 1000 DADOS
+
+Tipo de ordenação: BUBBLE SORT
+Trocas: 255409
+Comparações: 499035
+Tempo total de execução: 0.1353292465 segundos
+
+Tipo de ordenação: SHELL SORT
+Trocas: 7485
+Comparações: 8006
+Tempo total de execução: 0.0031979084 segundos
+
+Tipo de ordenação: QUICK SORT
+Trocas: 1742
+Comparações: 15079
+Tempo total de execução: 0.0020487309 segundos
+
+Tipo de ordenação: INSERTION SORT
+Trocas: 255409
+Comparações: 999
+Tempo total de execução: 0.0444693565 segundos
+
+Tipo de ordenação: MERGE SORT
+Trocas: 8689
+Comparações: 8689
+Tempo total de execução: 0.0042176247 segundos
+
+Tipo de ordenação: SELECTION SORT
+Trocas: 994
+Comparações: 499500
+Tempo total de execução: 0.0522317886 segundos
+
+Tipo de ordenação: RADIX SORT
+Trocas: 0
+Comparações: 0
+Tempo total de execução: 0.0000014305 segundos
+
+Tipo de ordenação: BUCKET SORT
+Trocas: 255409
+Comparações: 256408
+Tempo total de execução: 0.0159933567 segundos
+
+CENÁRIO 2
+
+PEQUENO - 1000 DADOS
+
+Tipo de ordenação: BUBBLE SORT
+Trocas: 252508
+Comparações: 499004
+Tempo total de execução: 0.1009860039 segundos
+
+Tipo de ordenação: SHELL SORT
+Trocas: 7177
+Comparações: 8006
+Tempo total de execução: 0.0030522346 segundos
+
+Tipo de ordenação: QUICK SORT
+Trocas: 1714
+Comparações: 15669
+Tempo total de execução: 0.0020005703 segundos
+
+Tipo de ordenação: INSERTION SORT
+Trocas: 252508
+Comparações: 999
+Tempo total de execução: 0.0435192585 segundos
+
+Tipo de ordenação: MERGE SORT
+Trocas: 8719
+Comparações: 8719
+Tempo total de execução: 0.0044517517 segundos
+
+Tipo de ordenação: SELECTION SORT
+Trocas: 994
+Comparações: 499500
+Tempo total de execução: 0.0538694859 segundos
+
+Tipo de ordenação: RADIX SORT
+Trocas: 0
+Comparações: 0
+Tempo total de execução: 0.0000007153 segundos
+
+Tipo de ordenação: BUCKET SORT
+Trocas: 252508
+Comparações: 253507
+Tempo total de execução: 0.0155501366 segundos
+
+CENÁRIO 3
+
+PEQUENO - 1000 DADOS
+
+Tipo de ordenação: BUBBLE SORT
+Trocas: 248452
+Comparações: 498225
+Tempo total de execução: 0.0996139050 segundos
+
+Tipo de ordenação: SHELL SORT
+Trocas: 6826
+Comparações: 8006
+Tempo total de execução: 0.0030152798 segundos
+
+Tipo de ordenação: QUICK SORT
+Trocas: 1664
+Comparações: 16114
+Tempo total de execução: 0.0020160675 segundos
+
+Tipo de ordenação: INSERTION SORT
+Trocas: 248452
+Comparações: 999
+Tempo total de execução: 0.0426340103 segundos
+
+Tipo de ordenação: MERGE SORT
+Trocas: 8711
+Comparações: 8711
+Tempo total de execução: 0.0043230057 segundos
+
+Tipo de ordenação: SELECTION SORT
+Trocas: 993
+Comparações: 499500
+Tempo total de execução: 0.0518867970 segundos
+
+Tipo de ordenação: RADIX SORT
+Trocas: 0
+Comparações: 0
+Tempo total de execução: 0.0000007153 segundos
+
+Tipo de ordenação: BUCKET SORT
+Trocas: 248452
+Comparações: 249451
+Tempo total de execução: 0.0154886246 segundos
+

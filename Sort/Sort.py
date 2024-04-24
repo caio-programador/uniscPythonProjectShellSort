@@ -92,7 +92,6 @@ def merge_sort(vetor):
 
 def merge_sort_helper(vetor):
     global comparacoes, num_troca
-    num_troca, comparacoes = 0, 0
     if len(vetor) <= 1:
         return vetor
 
@@ -179,6 +178,41 @@ def radix_sort(vetor):
     return vetor, comparacoes, trocas
 
 
+def insertion_sort_bucket(arr):
+    comparacoes = 0
+    num_troca = 0
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+            comparacoes += 1
+            num_troca += 1
+        arr[j + 1] = key
+        num_troca += 1
+    return comparacoes, num_troca
+
+
 def bucket_sort(vetor):
-    comparacoes, trocas = 0, 0
-    return vetor, comparacoes, trocas
+    n = len(vetor)
+    baldes = [[] for _ in range(n)]
+
+    for num in vetor:
+        index = min(int(num * n), n - 1)  # Limita o índice dentro dos limites aceitáveis
+        baldes[index].append(num)
+
+    comparacoes = 0
+    num_troca = 0
+
+    for i in range(n):
+        comp, swap = insertion_sort_bucket(baldes[i])
+        comparacoes += comp
+        num_troca += swap
+
+    k = 0
+    for i in range(n):
+        for num in baldes[i]:
+            vetor[k] = num
+            k += 1
+    return vetor, num_troca, comparacoes

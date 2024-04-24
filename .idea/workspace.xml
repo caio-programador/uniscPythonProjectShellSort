@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="teste">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFinal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainTeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainTeste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/Sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="shell-sort" />
+        <entry key="$PROJECT_DIR$" value="test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,19 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MainFinal.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MainTeste.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Sort.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Utils.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/caio/Documents/projects/uniscPythonProjectShellSort&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main.executor": "Run",
+    "Python.MainFinal.executor": "Run",
+    "Python.MainTeste.executor": "Run",
+    "Python.Sort.executor": "Run",
+    "Python.Utils.executor": "Run",
+    "Python.teste.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/caio/Documents/projects/uniscPythonProjectShellSort"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -191,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713911204133</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="teste">
+      <option name="closed" value="true" />
+      <created>1713912152454</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713912152454</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
