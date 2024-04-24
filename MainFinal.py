@@ -14,13 +14,13 @@ for i in range(1, 4):
     vetorPequenoAleatorio = rd.randint(1, 10000, 1000)
     print("PEQUENO - 1000 DADOS")
     test(vetorPequenoAleatorio)
-    """
+
     adicionar_texto(arquivo, "MÉDIO - 10000 DADOS\n\n")
     vetorMedioAleatorio = rd.randint(1, 100000, 10000)
     print("MÉDIO - 10000 DADOS")
     test(vetorMedioAleatorio)
     
-   
+    """
     adicionar_texto(arquivo, "GRANDE - 50000 DADOS\n\n")
     vetorGrandeAleatorio = rd.randint(1, 500000, 50000)
     print("GRANDE - 50000 DADOS")

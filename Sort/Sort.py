@@ -173,9 +173,47 @@ def selection_sort(vetor):
     return vetor, comparacoes, num_troca
 
 
+def counting_sort(vetor, place):
+    global comparacoes, num_troca
+    size = len(vetor)
+    output = [0] * size
+    count = [0] * 10
+
+    # Calculate count of elements
+    for i in range(0, size):
+        comparacoes += 1
+        index = vetor[i] // place
+        count[index % 10] += 1
+
+    # Calculate cumulative count
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    i = size - 1
+    while i >= 0:
+        index = vetor[i] // place
+        output[count[index % 10] - 1] = vetor[i]
+        count[index % 10] -= 1
+        num_troca += 1
+        i -= 1
+
+    for i in range(0, size):
+        vetor[i] = output[i]
+        num_troca += 1
+
+
 def radix_sort(vetor):
-    comparacoes, trocas = 0, 0
-    return vetor, comparacoes, trocas
+    global comparacoes, num_troca
+    comparacoes, num_troca = 0, 0
+    # Get maximum element
+    max_element = max(vetor)
+
+    place = 1
+    while max_element // place > 0:
+        counting_sort(vetor, place)
+        place *= 10
+
+    return vetor, comparacoes, num_troca
 
 
 def insertion_sort_bucket(arr):

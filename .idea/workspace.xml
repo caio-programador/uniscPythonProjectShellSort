@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="teste">
+    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="análise comparativa em andamento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casos de teste" beforeDir="false" afterPath="$PROJECT_DIR$/Casos de teste" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFinal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainTeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainTeste.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sort/Sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort.py" afterDir="false" />
@@ -203,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713912152454</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="análise comparativa em andamento">
+      <option name="closed" value="true" />
+      <created>1713918799407</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713918799407</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -218,6 +227,7 @@
     <MESSAGE value="fizemos o shell e o bubble" />
     <MESSAGE value="quick sort, selection sort , merge sort e inserction sort" />
     <MESSAGE value="teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+    <MESSAGE value="análise comparativa em andamento" />
+    <option name="LAST_COMMIT_MESSAGE" value="análise comparativa em andamento" />
   </component>
 </project>

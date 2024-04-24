@@ -58,7 +58,7 @@ def all_sort(sort_type, vetor):
             inicio = time()
             novoVetor, comparacoes, trocas = radix_sort(novoVetor)
             total = time() - inicio
-            print(f'\n- Trocas: {trocas}\n- Comparações: {comparacoes}\n- Tempo de resposta: {total}')
+            print(f'{novoVetor}\n- Trocas: {trocas}\n- Comparações: {comparacoes}\n- Tempo de resposta: {total}')
             criar_arquivo(total, trocas, comparacoes, sort_type)
         case 8:
             inicio = time()
