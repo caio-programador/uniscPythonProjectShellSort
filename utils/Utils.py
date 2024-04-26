@@ -1,20 +1,23 @@
+# BIBLIOTECAS
 from time import time
 import timeit
-
 from Sort.Sort import *
 
-
+"""
+A função "all_sort" possui um match case que chama cada algoritmo de ordenação separadamente e de forma organizada.
+Também calcula o tempo de execução de cada algoritmo. 
+"""
 def all_sort(sort_type, vetor):
-    novoVetor = vetor.copy()
+    novoVetor = vetor.copy()      # cria uma cópia do vetor. Evita ter que criar toda hora um novo vetor
 
     match sort_type:
         case 1:
             print("\nBUBBLE SORT")
-            inicio = time()
+            inicio = time()                                             # pega tempo no inicio
             novoVetor, comparacoes, trocas = bubble_sort(novoVetor)
-            total = time() - inicio
+            total = time() - inicio                                     # calcula tempo total da execução da função
             print(f'\n- Trocas: {trocas}\n- Comparações: {comparacoes}\n- Tempo de resposta: {total}')
-            criar_arquivo(total, trocas, comparacoes, sort_type)
+            criar_arquivo(total, trocas, comparacoes, sort_type)        # Cria um txt com os resultados (será usado para gerar gráficos/tabelas)
         case 2:
             print("\nSHELL SORT")
             inicio = time()

@@ -1,8 +1,7 @@
+# BIBLIOTECAS
 import sys
-
 import numpy as np
 from numpy import random as rd
-
 import Sort.Sort
 from utils.Utils import all_sort, limpa_arquivo
 
@@ -18,6 +17,7 @@ all_sort(4, vetor1)
 all_sort(5, vetor1)
 all_sort(6, vetor1)
 all_sort(7, vetor1)
+
 
 # Para testar: Uma lista que já está ordenada.
 vetor2 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])

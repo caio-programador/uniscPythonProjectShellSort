@@ -1,37 +1,46 @@
+# BIBLIOTECAS
 import numpy as np
 
-
-def bubble_sort(vetor):
+""""
+Bubble Sort: troca elementos adjacentes até que a lista esteja ordenada.
+"""
+def bubble_sort(vetor):                 # bubble sort "inteligente"
     n = len(vetor)
     comparacoes, num_troca = 0, 0
     troca = True
-    while troca:
+
+    while troca:                        # Enquanto troca for verdadeiro, quer dizer que ainda há trocas a fazer
         troca = False
-        for i in range(n - 1):
+        for i in range(n - 1):          # Percorre o vetor
             comparacoes += 1
-            if vetor[i] > vetor[i + 1]:
+            if vetor[i] > vetor[i + 1]: # comparação entre 2 valores
                 vetor[i], vetor[i + 1] = vetor[i + 1], vetor[i]
-                troca = True
-                num_troca += 1
-        n -= 1
+                troca = True            # Informa que ocorreu a troca
+                num_troca += 1          # ocorre troca se entrar na condição
+        n -= 1                          # tamanho da lista - 1, pois o maior elemento já está em sua posição
     return vetor, comparacoes, num_troca
 
-
+""""
+ Insertion Sort: percorre um vetor da esquerda para a direita, ordenando os elementos à esquerda à medida que avança.
+"""
 def insertion_sort(vetor):
     n = len(vetor)
     comparacoes, num_troca = 0, 0
-    for index in range(1, n):
-        currentValue = vetor[index]
-        position = index
+    for index in range(1, n):           # Começa no segundo elemento
+        currentValue = vetor[index]     # Pega o valor atual
+        position = index                # Posicao como do indice atual
+
         comparacoes += 1
-        while position > 0 and vetor[position - 1] > currentValue:
-            vetor[position] = vetor[position - 1]
+        while position > 0 and vetor[position - 1] > currentValue: # Loop para encontrar a posição correta para inserir o valor atual
+            vetor[position] = vetor[position - 1]                  # Elemento maior vai para direita
             position -= 1  # Ajuste aqui
             num_troca += 1
         vetor[position] = currentValue
     return vetor, comparacoes, num_troca
 
-
+""""
+Quick Sort:  divide a lista em torno de um elemento pivô e ordena recursivamente as sublistas resultantes
+"""
 def quick_sort(vetor):
     global comparacoes, num_troca
     comparacoes, num_troca = 0, 0
@@ -82,7 +91,9 @@ def partition(vetor, first, last):
 
     return direita
 
-
+""""
+Merge Sort: divide a lista em metades, ordena cada metade e depois mescla as metades ordenadas.
+"""
 def merge_sort(vetor):
     global comparacoes, num_troca
     num_troca, comparacoes = 0, 0
@@ -108,15 +119,15 @@ def merge(esquerda, direita):
     resultado = []
     i = j = 0
 
-    while i < len(esquerda) and j < len(direita):
+    while i < len(esquerda) and j < len(direita):   # faz a comparação
         comparacoes += 1
         if esquerda[i] < direita[j]:
-            num_troca += 1
+            num_troca += 1                          # realiza a troca
             resultado.append(esquerda[i])
             i += 1
         else:
             num_troca += 1
-            resultado.append(direita[j])
+            resultado.append(direita[j])           # realiza a troca
             j += 1
 
     resultado.extend(esquerda[i:])
@@ -124,84 +135,67 @@ def merge(esquerda, direita):
 
     return np.array(resultado)
 
-
+""""
+Shell Sort: divide a lista em subgrupos menores e os ordena independentemente, reduzindo gradualmente a lacuna entre os 
+elementos comparados. É um insertion sort aprimorado.
+"""
 def shell_sort(vetor):
     global comparacoes, num_troca
-    h = len(vetor) // 2
+    h = len(vetor) // 2             # Define o tamanho do intervalo
     comparacoes = 0
     num_troca = 0
-    while h > 0:
+
+    while h > 0:                    # Enquanto o houver um intervalo
 
         for startposition in range(h):
-            gapInsertionSort(vetor, startposition, h)
+            gapInsertionSort(vetor, startposition, h)   # chama o insertion sort para cada intervalo
 
-        h = h // 2
+        h = h // 2                 # Reduz o intervalo pela metade
 
     return vetor, comparacoes, num_troca
 
 
-def gapInsertionSort(vetor, start, h):
+def gapInsertionSort(vetor, start, h):              # ordena as subgrupos (mesma lógica do insertion sort)
     global comparacoes, num_troca
     for i in range(start + h, len(vetor), h):
         currentvalue = vetor[i]
         position = i
-        comparacoes += 1
 
-        while position >= h and vetor[position - h] > currentvalue:
-            num_troca += 1
+        comparacoes += 1
+        while position >= h and vetor[position - h] > currentvalue:     # faz a comparação
+            num_troca += 1                                              # se entrar no while faz a troca
             vetor[position] = vetor[position - h]
             position = position - h
 
         vetor[position] = currentvalue
 
-
+"""
+Selection sort: passar sempre o menor valor do vetor para a primeira posição, depois o segundo menor valor para a 
+segunda posição e assim sucessivamente.
+"""
 def selection_sort(vetor):
-    n = len(vetor)
+    n = len(vetor)                           # pega tamanho do vetor
     comparacoes, num_troca = 0, 0
 
     for i in range(n):
-        min = i
-        for j in range(i + 1, n):
+        min = i                             # Define o indice atual como o menor
+        for j in range(i + 1, n):           # Loop para encontrar o índice do menor elemento restante no vetor
             comparacoes += 1
-            if vetor[j] < vetor[min]:
+            if vetor[j] < vetor[min]:       # compara o atual com o min. Se atual for menor, ele vira o min
                 min = j
 
-        if min != i:
+        if min != i:                        # Se o menor elemento não estiver na posição atual troca
             vetor[i], vetor[min] = vetor[min], vetor[i]
             num_troca += 1
 
     return vetor, comparacoes, num_troca
 
 
-def counting_sort(vetor, place):
-    global comparacoes, num_troca
-    size = len(vetor)
-    output = [0] * size
-    count = [0] * 10
 
-    # Calculate count of elements
-    for i in range(0, size):
-        comparacoes += 1
-        index = vetor[i] // place
-        count[index % 10] += 1
-
-    # Calculate cumulative count
-    for i in range(1, 10):
-        count[i] += count[i - 1]
-
-    i = size - 1
-    while i >= 0:
-        index = vetor[i] // place
-        output[count[index % 10] - 1] = vetor[i]
-        count[index % 10] -= 1
-        num_troca += 1
-        i -= 1
-
-    for i in range(0, size):
-        vetor[i] = output[i]
-        num_troca += 1
-
-
+"""
+Radix Sort: ordena os elementos processando seus dígitos individuais, em vez de comparar diretamente os valores 
+dos elementos.
+"""
 def radix_sort(vetor):
     global comparacoes, num_troca
     comparacoes, num_troca = 0, 0
@@ -215,23 +209,38 @@ def radix_sort(vetor):
 
     return vetor, comparacoes, num_troca
 
+def counting_sort(vetor, place):
+    global comparacoes, num_troca
+    size = len(vetor)
+    output = [0] * size
+    count = [0] * 10
 
-def insertion_sort_bucket(arr):
-    comparacoes = 0
-    num_troca = 0
-    for i in range(1, len(arr)):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-            comparacoes += 1
-            num_troca += 1
-        arr[j + 1] = key
+    # Calculate count of elements
+    for i in range(0, size):
+        index = vetor[i] // place
+        count[index % 10] += 1
+
+    # Calculate cumulative count
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    i = size - 1
+    while i >= 0:
+        index = vetor[i] // place
+        output[count[index % 10] - 1] = vetor[i] # coloca dentro do balde
         num_troca += 1
-    return comparacoes, num_troca
+        count[index % 10] -= 1
+        i -= 1
+
+    for i in range(0, size):
+        vetor[i] = output[i] # atualiza o vetor original
+        num_troca += 1
 
 
+""""
+Bucket Sort: divide a lista em compartimentos, distribui os elementos em cada compartimento com base em seu valor e, 
+em seguida, ordena cada compartimento antes de combiná-los para obter a lista ordenada.
+"""
 def bucket_sort(vetor):
     n = len(vetor)
     baldes = [[] for _ in range(n)]
@@ -254,3 +263,21 @@ def bucket_sort(vetor):
             vetor[k] = num
             k += 1
     return vetor, num_troca, comparacoes
+
+def insertion_sort_bucket(arr):
+    comparacoes = 0
+    num_troca = 0
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+            comparacoes += 1
+            num_troca += 1
+        arr[j + 1] = key
+        num_troca += 1
+    return comparacoes, num_troca
+
+
+

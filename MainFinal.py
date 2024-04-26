@@ -1,8 +1,9 @@
+# BIBLIOTECAS
 import sys
-
 import numpy as np
 from numpy import random as rd
 from utils.Utils import *
+
 
 limpa_arquivo()
 arquivo = "Casos de teste"
