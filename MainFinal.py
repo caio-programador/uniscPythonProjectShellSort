@@ -20,8 +20,7 @@ for i in range(1, 4):
     vetorMedioAleatorio = rd.randint(1, 100000, 10000)
     print("MÉDIO - 10000 DADOS")
     test(vetorMedioAleatorio)
-    
-    """
+
     adicionar_texto(arquivo, "GRANDE - 50000 DADOS\n\n")
     vetorGrandeAleatorio = rd.randint(1, 500000, 50000)
     print("GRANDE - 50000 DADOS")
@@ -30,7 +29,7 @@ for i in range(1, 4):
     adicionar_texto(arquivo, "SUPER GRANDE - 100000 DADOS\n\n")
     vetorSuperGrandeAleatorio = rd.randint(1, 1000000, 100000)
     print("SUPER GRANDE - 100000 DADOS")
-    test(vetorSuperGrandeAleatorio)"""
+    test(vetorSuperGrandeAleatorio)
     print()
 
 

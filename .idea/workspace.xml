@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="análise comparativa em andamento">
+    <list default="true" id="5d1f6443-e202-4838-97e9-3b2d783638c6" name="Changes" comment="radix">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uniscPythonProjectShellSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uniscPythonProjectShellSort.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casos de teste" beforeDir="false" afterPath="$PROJECT_DIR$/Casos de teste" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainTeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainTeste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFinal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sort/Sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>

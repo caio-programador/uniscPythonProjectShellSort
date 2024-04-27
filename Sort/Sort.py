@@ -38,7 +38,7 @@ def insertion_sort(vetor):
         vetor[position] = currentValue
     return vetor, comparacoes, num_troca
 
-""""
+"""
 Quick Sort:  divide a lista em torno de um elemento pivô e ordena recursivamente as sublistas resultantes
 """
 def quick_sort(vetor):
@@ -48,7 +48,9 @@ def quick_sort(vetor):
 
     return vetor, comparacoes, num_troca
 
-
+"""
+Função que faz a recursividade do quick_sort
+"""
 def quick_sort_helper(vetor, first, last):
     global num_comparacoes, num_troca
     if first < last:
@@ -57,7 +59,9 @@ def quick_sort_helper(vetor, first, last):
         quick_sort_helper(vetor, first, splitpoint - 1)
         quick_sort_helper(vetor, splitpoint + 1, last)
 
-
+"""
+Função que cria as partições do quick_sort
+"""
 def partition(vetor, first, last):
     global comparacoes, num_troca
     pivo = vetor[first]
@@ -91,7 +95,7 @@ def partition(vetor, first, last):
 
     return direita
 
-""""
+"""
 Merge Sort: divide a lista em metades, ordena cada metade e depois mescla as metades ordenadas.
 """
 def merge_sort(vetor):
@@ -100,7 +104,9 @@ def merge_sort(vetor):
     vetor = merge_sort_helper(vetor)
     return vetor, comparacoes, num_troca
 
-
+"""
+Função que faz a recursividade
+"""
 def merge_sort_helper(vetor):
     global comparacoes, num_troca
     if len(vetor) <= 1:
@@ -113,7 +119,9 @@ def merge_sort_helper(vetor):
 
     return merge(esquerda, direita)
 
-
+"""
+Função responsável por mesclar 
+"""
 def merge(esquerda, direita):
     global comparacoes, num_troca
     resultado = []
@@ -155,7 +163,10 @@ def shell_sort(vetor):
     return vetor, comparacoes, num_troca
 
 
-def gapInsertionSort(vetor, start, h):              # ordena as subgrupos (mesma lógica do insertion sort)
+"""
+Função utilizada pelo shell_sort para separar em subgrupos e realizar a ordenação
+"""
+def gapInsertionSort(vetor, start, h):
     global comparacoes, num_troca
     for i in range(start + h, len(vetor), h):
         currentvalue = vetor[i]
@@ -209,6 +220,10 @@ def radix_sort(vetor):
 
     return vetor, comparacoes, num_troca
 
+
+"""
+Função utilizada pelo radix_sort para ordenar 
+"""
 def counting_sort(vetor, place):
     global comparacoes, num_troca
     size = len(vetor)
@@ -264,6 +279,10 @@ def bucket_sort(vetor):
             k += 1
     return vetor, num_troca, comparacoes
 
+
+"""
+Função de insertion utilizada pelo bucket_sort
+"""
 def insertion_sort_bucket(arr):
     comparacoes = 0
     num_troca = 0
